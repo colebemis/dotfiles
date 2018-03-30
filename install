@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# WARNING:
+# Existing files could be overwritten as a result of this script
+
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # tmux
