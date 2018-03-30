@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# WARNING:
-# Existing files could be overwritten as a result of this script
-
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 function symlink {
@@ -12,12 +9,26 @@ function symlink {
   ln -fs $source $target
 }
 
-# tmux
-symlink tmux.conf ~/.tmux.conf
+function main {
+  # tmux
+  symlink tmux.conf ~/.tmux.conf
 
-# git
-symlink gitconfig ~/.gitconfig
+  # git
+  symlink gitconfig ~/.gitconfig
 
-# zsh
-symlink zshrc ~/.zshrc
+  # zsh
+  symlink zshrc ~/.zshrc
+}
+
+if [ "$1" == "--force" -o "$1" == "-f" ]; then
+  main
+else
+  read -p "This may overwrite existing files. Are you sure? (y/N) "
+
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    main
+  else
+    echo Aborted
+  fi
+fi
 
