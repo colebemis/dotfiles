@@ -5,12 +5,19 @@
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+function symlink {
+  local source="${BASEDIR}/${1}"
+  local target=$2
+
+  ln -fs $source $target
+}
+
 # tmux
-ln -fs ${BASEDIR}/tmux.conf ~/.tmux.conf
+symlink tmux.conf ~/.tmux.conf
 
 # git
-ln -fs ${BASEDIR}/gitconfig ~/.gitconfig
+symlink gitconfig ~/.gitconfig
 
 # zsh
-ln -fs ${BASEDIR}/zshrc ~/.zshrc
+symlink zshrc ~/.zshrc
 
