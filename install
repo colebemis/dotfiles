@@ -11,3 +11,6 @@ ln -fs ${BASEDIR}/tmux.conf ~/.tmux.conf
 # git
 ln -fs ${BASEDIR}/gitconfig ~/.gitconfig
 
+# zsh
+ln -fs ${BASEDIR}/zshrc ~/.zshrc
+
