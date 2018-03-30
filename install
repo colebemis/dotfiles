@@ -18,6 +18,9 @@ function main {
 
   # zsh
   symlink zshrc ~/.zshrc
+
+  # vim
+  symlink vimrc ~/.vimrc
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
