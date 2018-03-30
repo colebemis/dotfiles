@@ -1,0 +1,10 @@
+#!/bin/bash
+
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# tmux
+ln -fs ${BASEDIR}/tmux.conf ~/.tmux.conf
+
+# git
+ln -fs ${BASEDIR}/gitconfig ~/.gitconfig
+
