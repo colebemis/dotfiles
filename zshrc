@@ -104,7 +104,7 @@ alias unix3="ssh bemis@unix3.csc.calpoly.edu"
 alias unix4="ssh bemis@unix4.csc.calpoly.edu"
 alias unix5="ssh bemis@unix5.csc.calpoly.edu"
 
-# Set up nvm
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
+# Allow local overrides
+if [ -f ~/.zshrc_local ]; then
+  source ~/.zshrc_local
+fi
