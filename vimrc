@@ -14,3 +14,8 @@ set nowrap
 set mouse=a
 set pastetoggle=<F3>
 
+" Allow local overrides
+let $LOCALFILE=expand("~/.vimrc_local")
+if filereadable($LOCALFILE)
+    source $LOCALFILE
+endif
