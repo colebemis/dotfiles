@@ -10,6 +10,8 @@ function symlink {
 }
 
 function main {
+  git submodule update --init --recursive
+
   # tmux
   symlink tmux.conf ~/.tmux.conf
 
@@ -36,4 +38,5 @@ else
     echo Aborted
   fi
 fi
+
 
