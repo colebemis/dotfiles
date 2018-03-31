@@ -20,7 +20,7 @@ function main {
 
   # zsh
   symlink zshrc ~/.zshrc
-  symlink cole.zsh-theme ~/.oh-my-zsh/themes
+  symlink cole.zsh-theme ~/.oh-my-zsh/custom/themes
   symlink zsh-autosuggestions ~/.oh-my-zsh/custom/plugins
   symlink zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins
 
