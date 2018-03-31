@@ -19,6 +19,7 @@ function main {
   # zsh
   symlink zshrc ~/.zshrc
   symlink cole.zsh-theme ~/.oh-my-zsh/themes/cole.zsh-theme
+  symlink zsh-autosuggestions ~/.oh-my-zsh/custom/plugins
 
   # vim
   symlink vimrc ~/.vimrc
