@@ -4,9 +4,9 @@
 
 PROMPT='
 ${TIME} ${CONDITIONAL_MACHINE} ${DIR} $(git_prompt_info)
-%(?.%F{242}.%F{red})${PROMPT_SYMBOL}%f '
+${PROMPT_SYMBOL} '
 
-PROMPT_SYMBOL="❯"
+PROMPT_SYMBOL="%(?.%F{242}.%F{red})❯%f"
 DIVIDER="%F{242}•%f"
 
 TIME="%T"
@@ -14,7 +14,7 @@ MACHINE="%m"
 DIR="%~"
 
 if [[ -n $SSH_CONNECTION ]]; then
-  CONDITIONAL_MACHINE="${DIVIDER} %F{cyan}${MACHINE}%f ${DIVIDER}"
+  CONDITIONAL_MACHINE="${DIVIDER} %B%F{blue}${MACHINE}%f%b ${DIVIDER}"
 else
   CONDITIONAL_MACHINE="${DIVIDER}"
 fi
