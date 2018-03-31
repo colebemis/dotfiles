@@ -1,3 +1,5 @@
 [user]
 	name = Cole Bemis
 	email = colebemis@gmail.com
+[push]
+	default = simple
