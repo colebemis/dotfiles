@@ -13,12 +13,14 @@ TIME="%T"
 MACHINE="%m"
 DIR="%~"
 
+# Show machine name if ssh'd into remote machine
 if [[ -n $SSH_CONNECTION ]]; then
   CONDITIONAL_MACHINE="$SEP %B%F{blue}${MACHINE}%f%b $SEP"
 else
   CONDITIONAL_MACHINE="$SEP"
 fi
 
+# Git info
 ZSH_THEME_GIT_PROMPT_PREFIX="$SEP "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}✔%f"
