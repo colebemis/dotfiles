@@ -97,7 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Aliases
-alias com="ssh cbemis@cominor.com"
+alias com="ssh -t cbemis@cominor.com 'cd Code; zsh'"
 alias unix1="ssh bemis@unix1.csc.calpoly.edu"
 alias unix2="ssh bemis@unix2.csc.calpoly.edu"
 alias unix3="ssh bemis@unix3.csc.calpoly.edu"
