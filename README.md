@@ -5,13 +5,13 @@ This repo contains my personal dotfiles. Inspired by [Managing Your Dotfiles](ht
 ## Installation
 
 ```shell
-# Clone the repository (including submodules) into ~/.dotfiles directory
+# Clone repository (including submodules) into ~/.dotfiles directory
 git clone --recursive https://github.com/colebemis/dotfiles.git ~/.dotfiles
 
-# Enter the ~/.dotfiles directory
+# Enter ~/.dotfiles directory
 cd ~/.dotfiles
 
-# Run the install script
+# Run install script
 ./install
 ```
 
