@@ -1,6 +1,6 @@
 # dotfiles
 
-This repo contains my personal dotfiles.
+This repo contains my personal dotfiles. Inspired by [Managing Your Dotfiles](https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/).
 
 ## Installation
 
