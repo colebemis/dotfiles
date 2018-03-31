@@ -3,7 +3,7 @@
 #   2. Add the following to ~/.zshrc: ZSH_THEME="cole"
 
 PROMPT='
-${TIME} ${DIVIDER} ${DIR} $(git_prompt_info)
+${TIME} ${DIVIDER} ${MACHINE} ${DIVIDER} ${DIR} $(git_prompt_info)
 %(?.%F{242}.%F{red})${PROMPT_SYMBOL}%f '
 
 PROMPT_SYMBOL="❯"
