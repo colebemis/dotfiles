@@ -3,8 +3,8 @@
 #   2. Add the following to ~/.zshrc: ZSH_THEME="cole"
 
 PROMPT='
-%B$TIME $CONDITIONAL_MACHINE $DIR $(git_prompt_info) $(git_prompt_status)
-$PROMPT_SYMBOL%b '
+$TIME $CONDITIONAL_MACHINE $DIR $(git_prompt_info) $(git_prompt_status)
+$PROMPT_SYMBOL '
 
 PROMPT_SYMBOL="%(?.%F{242}.%F{red})❯%f"
 SEP="%F{242}•%f"
@@ -15,7 +15,7 @@ DIR="%~"
 
 # Show machine name if ssh'd into remote machine
 if [[ -n $SSH_CONNECTION ]]; then
-  CONDITIONAL_MACHINE="$SEP %F{blue}${MACHINE}%f $SEP"
+  CONDITIONAL_MACHINE="$SEP %B%F{blue}${MACHINE}%f%b $SEP"
 else
   CONDITIONAL_MACHINE="$SEP"
 fi
