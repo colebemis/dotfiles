@@ -115,11 +115,11 @@ function tab-reset {
     echo -ne "\033]6;1;bg;*;default\a"
 }
 
-if [[ -n $SSH_CONNECTION ]]; then
-  tab-color 128 216 255
-else
-  tab-reset
-fi
+#if [[ -n $SSH_CONNECTION ]]; then
+#  tab-color 128 216 255
+#else
+#  tab-reset
+#fi
 
 # Allow local overrides
 if [ -f ~/.zshrc_local ]; then
