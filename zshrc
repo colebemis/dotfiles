@@ -104,6 +104,9 @@ alias unix3="ssh bemis@unix3.csc.calpoly.edu"
 alias unix4="ssh bemis@unix4.csc.calpoly.edu"
 alias unix5="ssh bemis@unix5.csc.calpoly.edu"
 
+# Remove gg alias added by git plugin
+unalias gg
+
 # Change tab color when ssh'd into remote machine
 function tab-color {
     echo -ne "\033]6;1;bg;red;brightness;$1\a"
