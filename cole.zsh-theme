@@ -6,8 +6,8 @@ PROMPT='
 %B$TIME $CONDITIONAL_MACHINE $DIR $(git_prompt_info) $(git_prompt_status)
 $PROMPT_SYMBOL%b '
 
-PROMPT_SYMBOL="%(?.%F{242}.%F{red})❯%f"
-SEP="%F{242}•%f"
+PROMPT_SYMBOL="%(?.%F{248}.%F{red})❯%f"
+SEP="%F{248}•%f"
 
 TIME="%T"
 MACHINE="%m"
