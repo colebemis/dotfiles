@@ -124,6 +124,10 @@ function tab-reset {
 #  tab-reset
 #fi
 
+# Set up nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+
 # Allow local overrides
 if [ -f ~/.zshrc_local ]; then
   source ~/.zshrc_local
