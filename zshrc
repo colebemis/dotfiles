@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Fix directory permission issue (https://github.com/ohmyzsh/ohmyzsh/issues/6835)
+ZSH_DISABLE_COMPFIX=true
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -96,33 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Aliases
-alias com="ssh -t cbemis@cominor.com 'cd Code; zsh'"
-alias unix1="ssh bemis@unix1.csc.calpoly.edu"
-alias unix2="ssh bemis@unix2.csc.calpoly.edu"
-alias unix3="ssh bemis@unix3.csc.calpoly.edu"
-alias unix4="ssh bemis@unix4.csc.calpoly.edu"
-alias unix5="ssh bemis@unix5.csc.calpoly.edu"
-
 # Remove gg alias added by git plugin
 unalias gg
-
-# Change tab color when ssh'd into remote machine
-function tab-color {
-    echo -ne "\033]6;1;bg;red;brightness;$1\a"
-    echo -ne "\033]6;1;bg;green;brightness;$2\a"
-    echo -ne "\033]6;1;bg;blue;brightness;$3\a"
-}
-
-function tab-reset {
-    echo -ne "\033]6;1;bg;*;default\a"
-}
-
-#if [[ -n $SSH_CONNECTION ]]; then
-#  tab-color 128 216 255
-#else
-#  tab-reset
-#fi
 
 # Set up nvm
 export NVM_DIR="$HOME/.nvm"
