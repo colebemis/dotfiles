@@ -104,6 +104,7 @@ bootstrap_vscode() {
   code --install-extension vscodevim.vim
   code --install-extension jpoissonnier.vscode-styled-components
   code --install-extension wix.vscode-import-cost
+  code --install-extension LaurentTreguier.vscode-simple-icons
 }
 
 main() {
