@@ -15,4 +15,4 @@ cd ~/.dotfiles
 ./bootstrap.sh
 ```
 
-> **Note:** The bootstrap script is idempotent: it can safely be run multiple times.
+> **Note:** The bootstrap script is ✨ _idempotent_ ✨ meaning that it can safely be run multiple times.
