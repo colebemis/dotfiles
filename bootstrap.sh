@@ -82,11 +82,10 @@ bootstrap_git() {
   symlink gitconfig ~/.gitconfig
 }
 
-#bootstrap_node() {
-  #TODO: install node
-  #TODO: install global npm packages (dark-mode-alfred)
-  #npm install --global alfred-dark-mode
-#}
+bootstrap_node() {
+  # TODO: install node with nvm
+  npm install --global alfred-dark-mode
+}
 
 bootstrap_tmux() {
   echo_ok "Symlinking tmux.conf..."
@@ -113,7 +112,7 @@ main() {
   bootstrap_vim
   bootstrap_git
   bootstrap_tmux
-  #bootstrap_node
+  bootstrap_node
   bootstrap_vscode
 }
 
