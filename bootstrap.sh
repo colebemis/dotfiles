@@ -117,14 +117,5 @@ main() {
   bootstrap_vscode
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-  main
-else
-  read -p "This may overwrite existing files. Are you sure? (y/N) "
+main
 
-  if [[ $REPLY =~ ^[Yy]$ ]]; then
-    main
-  else
-    echo_warn Aborted
-  fi
-fi
