@@ -13,5 +13,6 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "breadcrumbs.enabled": false,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.fontSize": 14
 }
