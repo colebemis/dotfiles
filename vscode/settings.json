@@ -11,5 +11,7 @@
   "workbench.iconTheme": "simple-icons",
   "window.autoDetectColorScheme": true,
   "git.autofetch": true,
-  "breadcrumbs.enabled": false
+  "git.confirmSync": false,
+  "breadcrumbs.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false
 }
