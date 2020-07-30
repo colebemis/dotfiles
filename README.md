@@ -11,7 +11,7 @@ git clone --recursive git@github.com:colebemis/dotfiles.git ~/.dotfiles
 # Enter ~/.dotfiles directory
 cd ~/.dotfiles
 
-# Run bootstrap script 
+# Run bootstrap script
 ./bootstrap.sh
 ```
 
