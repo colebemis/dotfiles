@@ -51,7 +51,9 @@ bootstrap_homebrew() {
   brew cask install visual-studio-code
   brew cask install zoomus
 
-  #TODO: fonts
+  echo_ok "Installing fonts..."
+  brew tap homebrew/cask-fonts
+  brew cask install font-jetbrains-mono
 }
 
 
