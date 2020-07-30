@@ -6,7 +6,7 @@ This repo contains my personal dotfiles. Inspired by [Managing Your Dotfiles](ht
 
 ```shell
 # Clone repository (including submodules) into ~/.dotfiles directory
-git clone --recursive https://github.com/colebemis/dotfiles.git ~/.dotfiles
+git clone --recursive git@github.com:colebemis/dotfiles.git ~/.dotfiles
 
 # Enter ~/.dotfiles directory
 cd ~/.dotfiles
