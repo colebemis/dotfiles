@@ -3,3 +3,5 @@
 	email = colebemis@github.com
 [push]
 	default = simple
+[init]
+	defaultBranch = main

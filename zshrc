@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -106,7 +108,19 @@ unalias gg
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
 
+eval "$(rbenv init -)"
+
 # Allow local overrides
 if [ -f ~/.zshrc_local ]; then
   source ~/.zshrc_local
 fi
+
+# bun completions
+[ -s "/Users/colebemis/.bun/_bun" ] && source "/Users/colebemis/.bun/_bun"
+
+# bun
+export BUN_INSTALL="/Users/colebemis/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

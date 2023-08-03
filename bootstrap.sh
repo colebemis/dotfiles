@@ -27,6 +27,7 @@ bootstrap_homebrew() {
   brew install nvm
   brew install tmux
   brew install yarn
+  brew install github/gh/gh
 
   echo_ok "Installing Homebrew Cask apps..."
   brew cask install 1password
