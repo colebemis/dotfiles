@@ -5,14 +5,22 @@ This repo contains my personal dotfiles. Inspired by [Managing Your Dotfiles](ht
 ## Usage
 
 ```shell
-# Clone repository (including submodules) into ~/.dotfiles directory
-git clone --recursive git@github.com:colebemis/dotfiles.git ~/.dotfiles
+# Clone dotfiles as a "bare" repo
+gh repo clone colebemis/dotfiles .dotfiles -- --bare
 
-# Enter ~/.dotfiles directory
-cd ~/.dotfiles
+# Load dotfiles from remote repo
+alias mygit='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+mygit config --local status.showUntrackedFiles no
+mygit checkout
 
-# Run bootstrap script
-./bootstrap.sh
+# Install Homebrew
+# https://brew.sh/
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Homebrew packages from Brewfile
+brew bundle install --file=~/.Brewfile
+
+# Install Oh My Zsh
+# https://ohmyz.sh/#install
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-
-> **Note:** The bootstrap script is ✨ _idempotent_ ✨ meaning that it can safely be run multiple times.
