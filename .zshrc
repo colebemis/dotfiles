@@ -12,7 +12,8 @@ export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="cole"
+ZSH_THEME="robbyrussell"
+# ZSH_THEME="cole"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -66,8 +67,8 @@ ENABLE_CORRECTION="true"
 plugins=(
   git
   z
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+  # zsh-autosuggestions
+  # zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -101,12 +102,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias mygit='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
 # Remove gg alias added by git plugin
 unalias gg
 
 # Set up nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 eval "$(rbenv init -)"
 
@@ -114,13 +118,6 @@ eval "$(rbenv init -)"
 if [ -f ~/.zshrc_local ]; then
   source ~/.zshrc_local
 fi
-
-# bun completions
-[ -s "/Users/colebemis/.bun/_bun" ] && source "/Users/colebemis/.bun/_bun"
-
-# bun
-export BUN_INSTALL="/Users/colebemis/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
