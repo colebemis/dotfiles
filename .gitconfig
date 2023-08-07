@@ -1,9 +1,9 @@
 [user]
-	name = Cole Bemis
-	email = colebemis@github.com
+  name = Cole Bemis
+  email = colebemis@github.com
 [push]
-	default = simple
+  default = simple
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [pull]
   rebase = false
