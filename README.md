@@ -13,13 +13,6 @@ alias mygit='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 mygit config --local status.showUntrackedFiles no
 mygit checkout
 
-# Install Homebrew
-# https://brew.sh/
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Install Homebrew packages from Brewfile
-brew bundle install --file=~/.Brewfile
-
 # Install Oh My Zsh
 # https://ohmyz.sh/#install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
